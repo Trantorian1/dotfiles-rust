@@ -87,6 +87,15 @@ return {
           -- or a suggestion from your LSP for this to activate.
           map('<leader>ca', vim.lsp.buf.code_action, '[C]ode [A]ction')
 
+          -- Toggle inlay hints on an off, making type hints visible or not
+          local hints = false
+          local toggle_hints = function()
+            vim.lsp.inlay_hint.enable(0, hints)
+            hints = not hints
+          end
+
+          map('<leader>ih', toggle_hints, '[I]nlay [H]ints')
+
           -- Opens a popup that displays documentation about the word under your cursor
           --  See `:help K` for why this keymap
           map('K', vim.lsp.buf.hover, 'Hover Documentation')

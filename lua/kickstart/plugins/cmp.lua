@@ -28,7 +28,8 @@ return {
       --    you can use this plugin to help you. It even has snippets
       --    for various frameworks/libraries/etc. but you will have to
       --    set up the ones that are useful for you.
-      -- 'rafamadriz/friendly-snippets',
+      'pafamadriz/friendly-snippets',
+      'saecki/crates.nvim'
     },
     config = function()
       -- See `:help cmp`
@@ -87,6 +88,7 @@ return {
           { name = 'nvim_lsp' },
           { name = 'luasnip' },
           { name = 'path' },
+          { name = 'crates' }
         },
       }
     end,
