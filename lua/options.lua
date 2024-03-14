@@ -57,4 +57,7 @@ vim.opt.cursorline = true
 -- Minimal number of screen lines to keep above and below the cursor.
 vim.opt.scrolloff = 10
 
+-- Prevents buffers from being discarded when they are abandoned
+vim.opt.hidden = false
+
 -- vim: ts=2 sts=2 sw=2 et
