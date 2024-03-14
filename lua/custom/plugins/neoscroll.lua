@@ -3,14 +3,16 @@ return {
     'karb94/neoscroll.nvim',
     config = function()
       local neoscroll = require 'neoscroll'
-      neoscroll.setup {}
+      neoscroll.setup {
+        performance_mode = true,
+      }
 
       local scroll_up = function()
-        neoscroll.scroll(-1, true, 200, 'quadratic')
+        neoscroll.scroll(-1, true, 10)
       end
 
       local scroll_down = function()
-        neoscroll.scroll(1, true, 200, 'quadratic')
+        neoscroll.scroll(1, true, 10)
       end
 
       vim.keymap.set('n', '<S-w>', scroll_up, { desc = 'Scroll up' })
