@@ -2,7 +2,8 @@ return {
 	{
 		'mrcjkb/rustaceanvim',
 		dependencies = {
-			'lvimuser/lsp-inlayhints.nvim'
+			'lvimuser/lsp-inlayhints.nvim',
+			'artemave/workspace-diagnostics.nvim'
 		},
 		version = '^4', -- Recommended
 		ft = { 'rust' },
@@ -12,6 +13,7 @@ return {
 					highlight = "NonText",
 				},
 				tools = {
+					enable_clippy = false,
 					hover_actions = {
 						auto_focus = true,
 					},
@@ -19,6 +21,7 @@ return {
 				server = {
 					on_attach = function(client, bufnr)
 						require("lsp-inlayhints").on_attach(client, bufnr)
+						require('workspace-diagnostics').populate_workspace_diagnostics(client, bufnr)
 					end
 				}
 			}
