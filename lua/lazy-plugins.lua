@@ -28,25 +28,25 @@ require('lazy').setup({
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
 
-  require 'kickstart/plugins/gitsigns',
+  require 'lua.kickstart/plugins/gitsigns',
 
-  require 'kickstart/plugins/which-key',
+  require 'lua.kickstart/plugins/which-key',
 
-  require 'kickstart/plugins/telescope',
+  require 'lua.kickstart/plugins/telescope',
 
-  require 'kickstart/plugins/lspconfig',
+  require 'lua.kickstart/plugins/lspconfig',
 
-  require 'kickstart/plugins/conform',
+  require 'lua.kickstart/plugins/conform',
 
-  require 'kickstart/plugins/cmp',
+  require 'lua.kickstart/plugins/cmp',
 
-  require 'kickstart/plugins/tokyonight',
+  require 'lua.kickstart/plugins/tokyonight',
 
-  require 'kickstart/plugins/todo-comments',
+  require 'lua.kickstart/plugins/todo-comments',
 
-  require 'kickstart/plugins/mini',
+  require 'lua.kickstart/plugins/mini',
 
-  require 'kickstart/plugins/treesitter',
+  require 'lua.kickstart/plugins/treesitter',
 
   -- The following two comments only work if you have downloaded the kickstart repo, not just copy pasted the
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
@@ -65,7 +65,8 @@ require('lazy').setup({
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
   --    For additional information, see `:help lazy.nvim-lazy.nvim-structuring-your-plugins`
-  { import = 'custom.plugins' },
+
+  require 'lua.custom.plugins.init',
 }, {
   ui = {
     -- If you have a Nerd Font, set icons to an empty table which will use the

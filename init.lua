@@ -93,17 +93,21 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = false
 
+local config_path = debug.getinfo(1, 'S').source:match("@(.*[/\\])") or ''
+local lua_path = config_path .. '?.lua;' .. config_path .. '?/init.lua'
+package.path = lua_path .. ';' .. package.path
+
 -- [[ Setting options ]]
-require 'options'
+require 'lua.options'
 
 -- [[ Basic Keymaps ]]
-require 'keymaps'
+require 'lua.keymaps'
 
 -- [[ Install `lazy.nvim` plugin manager ]]
-require 'lazy-bootstrap'
+require 'lua.lazy-bootstrap'
 
 -- [[ Configure and install plugins ]]
-require 'lazy-plugins'
+require 'lua.lazy-plugins'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et

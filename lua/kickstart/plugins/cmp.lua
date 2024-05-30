@@ -28,7 +28,7 @@ return {
       --    you can use this plugin to help you. It even has snippets
       --    for various frameworks/libraries/etc. but you will have to
       --    set up the ones that are useful for you.
-      'pafamadriz/friendly-snippets',
+      'rafamadriz/friendly-snippets',
       'saecki/crates.nvim'
     },
     config = function()
