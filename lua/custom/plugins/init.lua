@@ -19,6 +19,7 @@ return {
 	require "lua.custom.plugins.neogen",
 	require "lua.custom.plugins.noice",
 	require "lua.custom.plugins.oil",
+	require "lua.custom.plugins.peek",
 	require "lua.custom.plugins.rainbow-delimiters",
 	require "lua.custom.plugins.rustaceanvim",
 	require "lua.custom.plugins.scrollbar",
