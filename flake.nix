@@ -33,6 +33,7 @@
           neovim
           neovide
           lua
+          xclip
           # kickstart
           git
           gnumake
