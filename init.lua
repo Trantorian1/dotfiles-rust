@@ -91,7 +91,7 @@ vim.g.mapleader = ' '
 vim.g.maplocalleader = ' '
 
 -- Set to true if you have a Nerd Font installed
-vim.g.have_nerd_font = false
+vim.g.have_nerd_font = true
 
 local config_path = debug.getinfo(1, 'S').source:match("@(.*[/\\])") or ''
 local lua_path = config_path .. '?.lua;' .. config_path .. '?/init.lua'
@@ -111,3 +111,13 @@ require 'lua.lazy-plugins'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
+
+if vim.g.neovide then
+
+  local fullscreen = false
+  vim.keymap.set('n', '<F11>', function()
+    fullscreen = not fullscreen
+    vim.g.neovide_fullscreen = fullscreen
+  end, { desc = 'Fullsceen' })
+
+end
