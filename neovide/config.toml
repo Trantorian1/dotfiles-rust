@@ -1,0 +1,10 @@
+[font]
+    normal = ["JetBrainsMonoNl Nerd Font Mono"]
+    size = 18.0
+
+fork = true
+frame = "none"
+idle = false
+maximized = true
+title-hidden = true
+vsync = true
