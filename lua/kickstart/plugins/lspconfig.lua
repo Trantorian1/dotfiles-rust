@@ -90,8 +90,10 @@ return {
           -- Toggle inlay hints on an off, making type hints visible or not
           local hints = false
           local toggle_hints = function()
-            vim.lsp.inlay_hint.enable(0, hints)
             hints = not hints
+            vim.lsp.inlay_hint.enable(hints)
+            require('symbol-usage').toggle_globally()
+            require('symbol-usage').refresh()
           end
 
           map('<leader>ih', toggle_hints, '[I]nlay [H]ints')

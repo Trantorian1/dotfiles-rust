@@ -61,9 +61,9 @@ local function text_format(symbol)
 end
 
 return  {
-	'Wansmer/symbol-usage.nvim',
-	event = 'LspAttach',
-	opts = {
-		text_format = text_format
-	}
+  'Wansmer/symbol-usage.nvim',
+  event = 'LspAttach',
+  opts = {
+    text_format = text_format
+  }
 }
