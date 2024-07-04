@@ -58,7 +58,7 @@ return {
 			desc = '[T]est [S]ummary'
 		},
 		{
-			']t',
+			't]',
 			function()
 				require('neotest').jump.next()
 			end,
@@ -66,7 +66,7 @@ return {
 			desc = 'Next test'
 		},
 		{
-			'[t',
+			't[',
 			function()
 				require('neotest').jump.prev()
 			end,
