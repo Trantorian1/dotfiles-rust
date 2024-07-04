@@ -10,6 +10,7 @@ return {
 	require "lua.custom.plugins.circom",
 	require "lua.custom.plugins.cursorline",
 	require "lua.custom.plugins.diffview",
+	require "lua.custom.plugins.flash",
 	require "lua.custom.plugins.git-blame",
 	require "lua.custom.plugins.inlayhints",
 	require "lua.custom.plugins.lazygit",
