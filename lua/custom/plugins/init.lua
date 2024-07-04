@@ -28,6 +28,7 @@ return {
 	require "lua.custom.plugins.smart-splits",
 	require "lua.custom.plugins.spectre",
 	require "lua.custom.plugins.statuscol",
+	require "lua.custom.plugins.symbol-usage",
 	require "lua.custom.plugins.toggleterm",
 	require "lua.custom.plugins.trouble",
 	require "lua.custom.plugins.ts-context",
