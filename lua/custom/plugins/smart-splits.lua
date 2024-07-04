@@ -1,26 +1,71 @@
 return {
   {
     'mrjones2014/smart-splits.nvim',
-    config = function()
-      local smart_splits = require 'smart-splits'
-
-      smart_splits.setup {
+    opts = {
         resize_mode = {
           silent = false,
         },
-      }
-
+    },
+    keys = {
       -- movement motions
-      vim.keymap.set('n', '<M-Left>', smart_splits.move_cursor_left, { desc = 'Move cursor left' })
-      vim.keymap.set('n', '<M-Right>', smart_splits.move_cursor_right, { desc = 'Move cursor right' })
-      vim.keymap.set('n', '<M-Up>', smart_splits.move_cursor_up, { desc = 'Move cursor up' })
-      vim.keymap.set('n', '<M-Down>', smart_splits.move_cursor_down, { desc = 'Move cursor down' })
+      {
+        '<M-Left>',
+        function()
+          require('smart-splits').move_cursor_left()
+        end,
+        { desc = 'Move cursor left' }
+      },
+      {
+        '<M-Right>',
+        function()
+          require('smart-splits').move_cursor_right()
+        end,
+        { desc = 'Move cursor right' }
+      },
+      {
+        '<M-Up>',
+        function()
+          require('smart-splits').move_cursor_up()
+        end,
+        { desc = 'Move cursor up' }
+      },
+      {
+        '<M-Down>',
+        function()
+          require('smart-splits').move_cursor_down()
+        end,
+        { desc = 'Move cursor down' }
+      },
 
       -- resize motions
-      vim.keymap.set('n', '<M-S-Left>', smart_splits.resize_left, { desc = 'Resize left' })
-      vim.keymap.set('n', '<M-S-Right>', smart_splits.resize_right, { desc = 'Resize right' })
-      vim.keymap.set('n', '<M-S-Up>', smart_splits.resize_up, { desc = 'Resize up' })
-      vim.keymap.set('n', '<M-S-Down>', smart_splits.resize_down, { desc = 'Resize down' })
-    end,
-  },
+      {
+        '<M-S-Left>',
+        function()
+          require('smart-splits').resize_left()
+        end,
+        { desc = 'Resize left' }
+      },
+      {
+        '<M-S-Right>',
+        function()
+          require('smart-splits').resize_right()
+        end,
+        { desc = 'Resize right' }
+      },
+      {
+        '<M-S-Up>',
+        function()
+          require('smart-splits').resize_up()
+        end,
+        { desc = 'Resize up' }
+      },
+      {
+        '<M-S-Down>',
+        function()
+          require('smart-splits').resize_down()
+        end,
+        { desc = 'Resize down' }
+      }
+    }
+  }
 }

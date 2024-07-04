@@ -2,10 +2,16 @@ return {
 	{
 		"danymat/neogen",
 		config = function()
-			local neogen = require('neogen')
-			neogen.setup {}
-
-			vim.keymap.set('n', '<leader>dc', neogen.generate, { desc = '[D]ocument [C]ode' })
+			require('neogen').setup()
 		end,
+		keys = {
+			{
+				'<leader>dc',
+				function()
+					require('neogen').generate()
+				end,
+				{ desc = '[D]ocument [C]ode' }
+			}
+		}
 	}
 }

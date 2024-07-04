@@ -4,7 +4,11 @@ return {
   dependencies = {
     'nvim-lua/plenary.nvim',
   },
-  config = function()
-    vim.keymap.set('n', '<leader>gu', '<CMD>LazyGit<CR>', { desc = '[G]it [U]i' })
-  end,
+  keys = {
+    {
+      '<leader>gu',
+      '<CMD>LazyGit<CR>',
+      { desc = '[G]it [U]i' }
+    }
+  }
 }

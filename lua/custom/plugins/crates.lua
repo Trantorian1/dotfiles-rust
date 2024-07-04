@@ -5,29 +5,60 @@ return {
 		event = { "BufRead Cargo.toml" },
 		config = function()
 			require('crates').setup()
-
-			local crates = require("crates")
-
-			vim.keymap.set('n', '<leader>ci', function()
-				crates.show_crate_popup()
-				crates.focus_popup()
-			end, { desc = '[C]rate [I]nfo' })
-
-			vim.keymap.set('n', '<leader>cf', function()
-				crates.show_features_popup()
-				crates.focus_popup()
-			end, { desc = '[C]rate [F]eatures' })
-
-			vim.keymap.set('n', '<leader>cv', function()
-				crates.show_versions_popup()
-				crates.focus_popup()
-			end, { desc = '[C]rate [V]ersion' })
-
-			vim.keymap.set('n', '<leader>cu', crates.upgrade_crate, { desc = '[C]rate [U]prage' })
-			vim.keymap.set('n', '<leader>cua', crates.upgrade_all_crates, { desc = '[C]rate [U]prage [A]ll' })
-
-			vim.keymap.set('n', '<leader>cU', crates.update_crate, { desc = '[C]rate [U]pdate' })
-			vim.keymap.set('n', '<leader>cUa', crates.update_all_crates, { desc = '[C]rate [U]pdate [A]ll' })
-		end
+		end,
+		keys  = {
+			{
+				"<leader>ci",
+				function()
+					require("crates").show_crate_popup()
+					require("crates").focus_popup()
+				end,
+				{ desc = '[C]rate [I]nfo' }
+			},
+			{
+				"<leader>cf",
+				function()
+					require("crates").show_features_popup()
+					require("crates").focus_popup()
+				end,
+				{ desc = '[C]rate [F]eatures' }
+			},
+			{
+				"<leader>cv",
+				function()
+					require("crates").show_versions_popup()
+					require("crates").focus_popup()
+				end,
+				desc = '[C]rate [V]ersion'
+			},
+			{
+				"<leader>cu",
+				function()
+					require("crates").upgrade_crate()
+				end,
+				{ desc = '[C]rate [U]prage' }
+			},
+			{
+				"<leader>cua",
+				function()
+					require("crates").upgrade_all_crates()
+				end,
+				{ desc = '[C]rate [U]prage [A]ll' }
+			},
+			{
+				"<leader>cU",
+				function()
+					require("crates").update_crate()
+				end,
+				{ desc = '[C]rate [U]pdate' }
+			},
+			{
+				"<leader>cUa",
+				function()
+					require("crates").update_all_crates()
+				end,
+				{ desc = '[C]rate [U]pdate [A]ll' }
+			}
+		}
 	}
 }

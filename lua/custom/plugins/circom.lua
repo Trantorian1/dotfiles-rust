@@ -1,3 +1,3 @@
 return {
-		'iden3/vim-circom-syntax'
+	'iden3/vim-circom-syntax'
 }
