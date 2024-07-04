@@ -18,6 +18,7 @@ return {
 	require "lua.custom.plugins.markdown",
 	require "lua.custom.plugins.multicursor",
 	require "lua.custom.plugins.neogen",
+	require "lua.custom.plugins.neotest",
 	require "lua.custom.plugins.noice",
 	require "lua.custom.plugins.oil",
 	require "lua.custom.plugins.peek",
