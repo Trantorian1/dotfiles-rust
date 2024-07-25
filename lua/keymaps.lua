@@ -15,6 +15,13 @@ vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagn
 vim.keymap.set('n', '<S-s>', '<C-e>', { desc = 'Scroll down' })
 vim.keymap.set('n', '<S-w>', '<C-y>', { desc = 'Scroll down' })
 
+-- Spellchecking
+vim.opt.spelllang = 'en_us'
+vim.opt.spell = true
+
+vim.keymap.set('n', 'ss', 'z=', { desc = '[S]pell [S]uggestions' })
+vim.keymap.set('n', 'si', 'zg', { desc = '[S]pell [I]gnore' })
+
 -- Exit terminal mode in the builtin terminal with a shortcut that is a bit easier
 -- for people to discover. Otherwise, you normally need to press <C-\><C-n>, which
 -- is not what someone will guess without a bit more experience.

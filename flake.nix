@@ -25,6 +25,8 @@
           })
           rust-analyzer
           rustup
+          mdbook
+          mdbook-mermaid
           # TODO: move this to individual per-project flakes
           protobuf
           clang
