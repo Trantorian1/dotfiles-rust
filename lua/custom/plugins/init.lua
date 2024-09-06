@@ -11,6 +11,7 @@ return {
   require 'lua.custom.plugins.circom',
   require 'lua.custom.plugins.cursorline',
   require 'lua.custom.plugins.diffview',
+  require 'lua.custom.plugins.edgy',
   require 'lua.custom.plugins.flash',
   require 'lua.custom.plugins.helpview',
   require 'lua.custom.plugins.git-blame',
