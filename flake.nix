@@ -19,7 +19,7 @@
       devShell = pkgs.mkShell {
         buildInputs = with pkgs; [
           # Rust
-          (rust-bin.stable.latest.default.override {
+          (rust-bin.nightly.latest.default.override {
             extensions = [ "rust-src" ];
             targets = [ "wasm32-unknown-unknown" ];
           })
@@ -27,15 +27,24 @@
           rustup
           mdbook
           mdbook-mermaid
+          # python
+          python3
+          black
+          isort
+          # go
+          go
           # TODO: move this to individual per-project flakes
           protobuf
           clang
           llvmPackages.libclang
+          pkg-config
+          openssl
           # neovim
           neovim
           neovide
           lua
           xclip
+          unzip
           # kickstart
           git
           gnumake
@@ -46,14 +55,17 @@
           # git ui
           lazygit
           # javascript
+          nodejs
           deno
+          # formatters
+          nodePackages.fixjson
         ];
 
         RUST_BACKTRACE = 1;
 
         shellHook = ''
           export LIBCLANG_PATH=${pkgs.llvmPackages.libclang.lib}/lib
-          export XDG_CONFIG_HOME=$HOME/Documents/code/rust/.dotfiles;
+          export XDG_CONFIG_HOME=$HOME/Documents/code/rust/.dotfiles
         '';
       };
     }
