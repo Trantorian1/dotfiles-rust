@@ -23,7 +23,17 @@ require('lazy').setup({
   --    require('Comment').setup({})
 
   -- "gc" to comment visual regions/lines
-  { 'numToStr/Comment.nvim',  opts = {} },
+  {
+    'numToStr/Comment.nvim',
+    opts = {
+      toggler = {
+        -- Line-comment toggle keymap
+        line = 'cc',
+        -- Block-comment toggle keymap
+        block = 'bb',
+      },
+    },
+  },
 
   -- modular approach: using `require 'path/name'` will
   -- include a plugin definition from file lua/path/name.lua
@@ -57,7 +67,7 @@ require('lazy').setup({
   --  Here are some example plugins that I've included in the kickstart repository.
   --  Uncomment any of the lines below to enable them (you will need to restart nvim).
   --
-  -- require 'kickstart.plugins.debug',
+  require 'lua.kickstart.plugins.debug',
   -- require 'kickstart.plugins.indent_line',
 
   -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
