@@ -28,9 +28,11 @@
           mdbook
           mdbook-mermaid
           # python
-          python3
+          python39
           black
           isort
+          poetry
+          mypy
           # go
           go
           # TODO: move this to individual per-project flakes
