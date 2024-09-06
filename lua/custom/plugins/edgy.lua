@@ -15,9 +15,6 @@ return {
         end,
       },
       {
-        ft = 'spectre_panel',
-      },
-      {
         ft = 'trouble',
       },
     },
@@ -29,6 +26,10 @@ return {
         filter = function(buf)
           return vim.bo[buf].buftype == 'help'
         end,
+      },
+
+      {
+        ft = 'grug-far',
       },
     },
 
