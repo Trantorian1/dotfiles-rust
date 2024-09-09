@@ -171,7 +171,7 @@ return {
           },
         },
 
-        yright = {
+        pyright = {
           settings = {
             python = {
               analysis = {
