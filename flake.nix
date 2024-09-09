@@ -68,6 +68,7 @@
         shellHook = ''
           export LIBCLANG_PATH=${pkgs.llvmPackages.libclang.lib}/lib
           export XDG_CONFIG_HOME=$HOME/Documents/code/.dotfiles
+          export SHELL=$(which zsh)
         '';
       };
     }
