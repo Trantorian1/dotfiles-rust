@@ -170,8 +170,20 @@ return {
             },
           },
         },
-      }
 
+        yright = {
+          settings = {
+            python = {
+              analysis = {
+                autoSearchPaths = true,
+                useLibraryCodeForTypes = true,
+                diagnosticMode = 'workspace',
+              },
+              venvPath = vim.fn.expand '~/.cache/pypoetry/virtualenvs',
+            },
+          },
+        },
+      }
       -- Ensure the servers and tools above are installed
       --  To check the current status of installed tools and/or manually install
       --  other tools, you can run
@@ -186,7 +198,6 @@ return {
       vim.list_extend(ensure_installed, {
         'stylua',
         'marksman',
-        'pyright',
       })
       require('mason-tool-installer').setup { ensure_installed = ensure_installed }
 

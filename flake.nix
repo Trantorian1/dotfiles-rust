@@ -28,7 +28,7 @@
           mdbook
           mdbook-mermaid
           # python
-          python39
+          python312
           black
           isort
           poetry
