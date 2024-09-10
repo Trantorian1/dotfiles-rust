@@ -173,11 +173,14 @@ return {
 
         pyright = {
           settings = {
+            pyright = {
+              -- Using Ruff's import organizer
+              disableOrganizeImports = true,
+            },
             python = {
               analysis = {
-                autoSearchPaths = true,
-                useLibraryCodeForTypes = true,
-                diagnosticMode = 'workspace',
+                -- Ignore all files for analysis to exclusively use Ruff for linting
+                ignore = { '*' },
               },
               venvPath = vim.fn.expand '~/.cache/pypoetry/virtualenvs',
             },

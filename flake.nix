@@ -29,7 +29,7 @@
           mdbook-mermaid
           # python
           python312
-          black
+          ruff
           isort
           poetry
           mypy

@@ -11,7 +11,7 @@ return {
         lua = { 'stylua' },
         rust = { 'rustfmt' },
         json = { 'fixjson' },
-        python = { 'isort', 'black' },
+        python = { 'ruff_fix', 'ruff_format', 'ruff_organize_imports' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
