@@ -33,6 +33,8 @@
           isort
           poetry
           mypy
+          # toml
+          taplo
           # go
           go
           # TODO: move this to individual per-project flakes

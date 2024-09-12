@@ -12,6 +12,7 @@ return {
         rust = { 'rustfmt' },
         json = { 'fixjson' },
         python = { 'ruff_fix', 'ruff_format', 'ruff_organize_imports' },
+        toml = { 'taplo' },
         -- Conform can also run multiple formatters sequentially
         -- python = { "isort", "black" },
         --
