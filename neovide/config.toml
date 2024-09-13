@@ -1,6 +1,6 @@
 [font]
     normal = ["JetBrainsMonoNl Nerd Font Mono"]
-    size = 18.0
+    size = 13.0
 
 fork = true
 frame = "none"
