@@ -37,6 +37,8 @@
           taplo
           # go
           go
+          # docker
+          docker-compose
           # TODO: move this to individual per-project flakes
           protobuf
           clang
