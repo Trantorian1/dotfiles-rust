@@ -29,16 +29,10 @@
           mdbook-mermaid
           # python
           python312
-          ruff
-          isort
           poetry
           mypy
-          # toml
-          taplo
           # go
           go
-          # docker
-          docker-compose
           # TODO: move this to individual per-project flakes
           protobuf
           clang
@@ -66,6 +60,10 @@
           deno
           # formatters
           nodePackages.fixjson
+          alejandra
+          ruff
+          isort
+          taplo
         ];
 
         RUST_BACKTRACE = 1;
