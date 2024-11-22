@@ -33,6 +33,7 @@ return {
   require 'lua.custom.plugins.rustaceanvim',
   require 'lua.custom.plugins.scrollbar',
   require 'lua.custom.plugins.smart-splits',
+  require 'lua.custom.plugins.speedtyper',
   require 'lua.custom.plugins.statuscol',
   require 'lua.custom.plugins.symbol-usage',
   require 'lua.custom.plugins.deadcolumn',
