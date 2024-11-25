@@ -9,7 +9,7 @@ return {
       randomize = true,
       game_modes = {
         countdown = {
-          time = 60,
+          time = 30,
         },
       },
     },
