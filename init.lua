@@ -93,7 +93,7 @@ vim.g.maplocalleader = ' '
 -- Set to true if you have a Nerd Font installed
 vim.g.have_nerd_font = true
 
-local config_path = debug.getinfo(1, 'S').source:match("@(.*[/\\])") or ''
+local config_path = debug.getinfo(1, 'S').source:match '@(.*[/\\])' or ''
 local lua_path = config_path .. '?.lua;' .. config_path .. '?/init.lua'
 package.path = lua_path .. ';' .. package.path
 
@@ -115,11 +115,14 @@ require('symbol-usage').toggle_globally()
 -- vim: ts=2 sts=2 sw=2 et
 
 if vim.g.neovide then
-
   local fullscreen = false
   vim.keymap.set('n', '<F11>', function()
     fullscreen = not fullscreen
     vim.g.neovide_fullscreen = fullscreen
   end, { desc = 'Fullsceen' })
 
+  vim.g.neovide_floating_corner_radius = 1
+  vim.g.neovide_floating_shadow = false
+  vim.g.neovide_floating_blur_amount_x = 0
+  vim.g.neovide_floating_blur_amount_y = 0
 end

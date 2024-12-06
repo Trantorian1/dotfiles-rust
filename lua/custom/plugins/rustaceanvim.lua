@@ -2,7 +2,6 @@ return {
   {
     'mrcjkb/rustaceanvim',
     dependencies = {
-      'lvimuser/lsp-inlayhints.nvim',
       'artemave/workspace-diagnostics.nvim',
     },
     version = '^4', -- Recommended
@@ -20,7 +19,6 @@ return {
         },
         server = {
           on_attach = function(client, bufnr)
-            require('lsp-inlayhints').on_attach(client, bufnr)
             require('workspace-diagnostics').populate_workspace_diagnostics(client, bufnr)
           end,
           default_settings = {
