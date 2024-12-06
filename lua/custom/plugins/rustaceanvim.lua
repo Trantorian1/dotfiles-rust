@@ -8,9 +8,6 @@ return {
     ft = { 'rust' },
     config = function()
       vim.g.rustaceanvim = {
-        inlay_hints = {
-          highlight = 'NonText',
-        },
         tools = {
           enable_clippy = false,
           hover_actions = {
@@ -35,6 +32,9 @@ return {
                   ['CHALK_OVERFLOW_DEPTH'] = '100000000',
                   ['CHALK_SOLVER_MAX_SIZE'] = '100000000',
                 },
+              },
+              files = {
+                excludeDirs = { 'target' },
               },
               cargo = {
                 -- Check feature-gated code

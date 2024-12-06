@@ -2,7 +2,7 @@
   description = "A very basic flake";
 
   inputs = {
-    nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
+    nixpkgs.url = "github:nixos/nixpkgs/nixos-24.11";
     rust-overlay.url = "github:oxalica/rust-overlay";
     flake-utils.url = "github:numtide/flake-utils";
   };
@@ -23,7 +23,7 @@
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
             # Rust
-            (rust-bin.nightly.latest.default.override {
+            (rust-bin.stable.latest.default.override {
               extensions = ["rust-src"];
               targets = ["wasm32-unknown-unknown"];
             })
