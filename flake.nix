@@ -28,7 +28,6 @@
               targets = ["wasm32-unknown-unknown"];
             })
             rust-analyzer
-            rustup
             mdbook
             mdbook-mermaid
             # python

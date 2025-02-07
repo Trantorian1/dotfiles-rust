@@ -21,6 +21,7 @@ return {
   require 'lua.custom.plugins.multicursor',
   require 'lua.custom.plugins.neogen',
   require 'lua.custom.plugins.neotest',
+  require 'lua.custom.plugins.nightfox',
   require 'lua.custom.plugins.noice',
   require 'lua.custom.plugins.no-neck-pain',
   require 'lua.custom.plugins.oil',
