@@ -56,8 +56,6 @@
             ripgrep
             # spectre
             gnused
-            # git ui
-            lazygit
             # javascript
             nodejs
             deno

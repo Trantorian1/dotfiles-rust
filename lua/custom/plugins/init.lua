@@ -15,7 +15,6 @@ return {
   require 'lua.custom.plugins.helpview',
   require 'lua.custom.plugins.git-blame',
   require 'lua.custom.plugins.grug-far',
-  require 'lua.custom.plugins.lazygit',
   require 'lua.custom.plugins.lualine',
   require 'lua.custom.plugins.markdown',
   require 'lua.custom.plugins.multicursor',
