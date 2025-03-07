@@ -7,7 +7,6 @@ return {
   require 'lua.custom.plugins.autopairs',
   require 'lua.custom.plugins.barbecue',
   require 'lua.custom.plugins.catpuccin',
-  require 'lua.custom.plugins.crates',
   require 'lua.custom.plugins.cursorline',
   require 'lua.custom.plugins.diffview',
   require 'lua.custom.plugins.edgy',
