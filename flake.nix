@@ -30,6 +30,7 @@
             rust-analyzer
             mdbook
             mdbook-mermaid
+            lld
             # python
             python312
             poetry
