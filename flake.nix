@@ -23,7 +23,7 @@
         devShell = pkgs.mkShell {
           buildInputs = with pkgs; [
             # Rust
-            (rust-bin.stable."1.88.0".default.override {
+            (rust-bin.nightly.latest.default.override {
               extensions = ["rust-src"];
               targets = ["wasm32-unknown-unknown"];
             })
